@@ -1,3 +1,3 @@
-## PasarApp
+== PasarApp
 
 My personal project repo for Bloc.io online class.
