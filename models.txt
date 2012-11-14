@@ -1,0 +1,28 @@
+User
+ name
+ password
+ email
+ shopping cart
+
+Category
+ name
+
+Product
+ store_id
+ category_id
+ name
+ price
+ bio
+
+Store
+ product_id
+ category_id
+ name
+ avatar
+ bio
+ user_id?(followers)
+
+ Market
+  store_id
+  product_id
+  category_id
