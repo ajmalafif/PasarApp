@@ -1,0 +1,13 @@
+Schools: name
+Teachers: name, title, started, bio, subject, school_id, boss_id
+CohortDescriptions: cohort_number, name, description, subject
+Cohorts: cohort_description_id, teacher_id, start_date
+Students: name, started, school_id
+CohortsStudents: cohort_id, student_id
+ProfilePics: img, imageable_id, imageable_type
+
+$ rails g model Teacher name:string title:string started:date bio:text subject:string school:references boss:references
+$ rails g model Cohort cohort_description:references teacher:references start_date:date
+$ rails g model CohortDescription cohort_number:integer name:string description:text subject:string
+$ rails g model Student name:string started:date school:references
+$ rails g model ProfilePic img:string imageable:references
