@@ -1,9 +1,9 @@
 class CreateMarkets < ActiveRecord::Migration
   def change
     create_table :markets do |t|
-      t.reference :store
-      t.reference :product
-      t.reference :category
+      t.references :store
+      t.references :product
+      t.references :category
 
       t.timestamps
     end

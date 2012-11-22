@@ -4,8 +4,8 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.decimal :price
       t.text :bio
-      t.reference :store
-      t.reference :category
+      t.references :store
+      t.references :category
 
       t.timestamps
     end
