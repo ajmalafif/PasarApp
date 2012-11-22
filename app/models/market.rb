@@ -1,3 +1,3 @@
 class Market < ActiveRecord::Base
-  # attr_accessible :title, :body
+  attr_accessible :category, :product, :store
 end
