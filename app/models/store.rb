@@ -1,3 +1,7 @@
 class Store < ActiveRecord::Base
-  attr_accessible :bio, :category, :name, :product, :user
+belongs_to :user
+  attr_accessible :bio, :category, :name, :product, :user, :avatar
+
+  has_many :products
+  has_many :categories
 end

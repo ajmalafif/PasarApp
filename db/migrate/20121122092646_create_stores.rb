@@ -6,6 +6,7 @@ class CreateStores < ActiveRecord::Migration
       t.references :product
       t.references :category
       t.references :user
+      t.string :avatar
 
       t.timestamps
     end

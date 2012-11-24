@@ -6,6 +6,7 @@ class CreateProducts < ActiveRecord::Migration
       t.text :bio
       t.references :store
       t.references :category
+      t.string :avatar
 
       t.timestamps
     end

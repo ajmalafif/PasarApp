@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(:version => 20121122092843) do
     t.text     "bio"
     t.integer  "store_id"
     t.integer  "category_id"
+    t.string   "avatar"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20121122092843) do
     t.integer  "product_id"
     t.integer  "category_id"
     t.integer  "user_id"
+    t.string   "avatar"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -50,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20121122092843) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "password"
+    t.string   "avatar"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
