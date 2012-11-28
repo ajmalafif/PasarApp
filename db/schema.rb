@@ -11,13 +11,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121122092843) do
+ActiveRecord::Schema.define(:version => 20121128021240) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "has_categories", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "has_category_id"
+    t.string   "has_category_type"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "has_categories", ["category_id"], :name => "index_has_categories_on_category_id"
+  add_index "has_categories", ["has_category_id"], :name => "index_has_categories_on_has_category_id"
 
   create_table "markets", :force => true do |t|
     t.integer  "store_id"
