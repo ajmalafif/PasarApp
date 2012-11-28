@@ -5,5 +5,5 @@ belongs_to :user
   has_many :products
   has_many :categories, :through => :has_categories
   has_many :has_categories, :as => :has_category
-endus
+end
 
