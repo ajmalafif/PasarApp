@@ -3,4 +3,9 @@ class User < ActiveRecord::Base
 
   has_one :store
   has_many :products
+
+  # following?
+  has_many :following_relationships, :foreign_key => :follower_id
+  has_many :following, :through => :following_relationships
+
 end

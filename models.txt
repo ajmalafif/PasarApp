@@ -26,3 +26,7 @@ Store
   store_id
   product_id
   category_id
+
+  Follow
+   follower
+   following

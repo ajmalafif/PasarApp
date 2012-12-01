@@ -1,4 +1,8 @@
 PasarApp::Application.routes.draw do
+  get "users/index"
+
+  get "users/show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
