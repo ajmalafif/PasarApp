@@ -1,2 +1,29 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.name %></h1>
+<p><%= @user.race %></p>
+
+<% if @current_user && @current_user != @user %>
+  <% if @current_user.following.include?(@store) %>
+    <%= link_to "Unfollow",
+      following_relationship_path(@current_user.following_relationship_for(@store)),
+      :method => :delete %>
+  <% else %>
+    <%= form_for @following_relationship do |f| %>
+      <%= f.hidden_field :following_id, :value => @user.id %>
+      <%= f.submit "Follow" %>
+    <% end %>
+  <% end %>
+<% end %>
+
+<h3>Following</h3>
+<ul>
+  <% @user.following.each do |u| %>
+    <li><%= link_to u.name, u %></li>
+  <% end %>
+</ul>
+
+<h3>Followed By</h3>
+<ul>
+  <% @user.followers.each do |u| %>
+    <li><%= link_to u.name, u %></li>
+  <% end %>
+</ul>
